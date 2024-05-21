@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="styleLanding.css" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Juego del Ahorcado</h1>
+        <button id="buttonToLanding">Inicio</button>
+    </header>
+    <div>
+        <h2>Tabla de Jugadores</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Puntuación</th>
+                    <th>N° de Victorias</th>
+                </tr>
+            </thead>
+            <tbody id="bodyPlayersTable">
+                <!-- Las filas se agregarán dinámicamente con JavaScript -->
+            </tbody>
+        </table>
+    </div>
+    <div>
+        <h2>Instrucciones</h2>
+        <p>El objetivo del juego es adivinar la palabra oculta antes de que el muñeco del ahorcado esté completo. Cada letra incorrecta añadirá una parte del cuerpo al muñeco.</p>
+    </div>
+    <button id="buttonInitGame">Iniciar Juego</button>
+
+    <!-- Ventana emergente -->
+    <div id="popup">
+        <div id="popup-content">
+            <h2>Ingresa tu nombre</h2>
+            <input type="text" id="playerName" placeholder="Tu nombre">
+            <button id="buttonSaveName">Guardar y Jugar</button>
+        </div>
+    </div>
+    <script src="scriptLanding.js"></script>
+</body>
+</html>

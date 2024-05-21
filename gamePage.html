@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Juego del Ahorcado</title>
+    <link rel="stylesheet" href="gamePage.html" type="text/css">
+</head>
+<body>
+    <header>
+        <h1>Juego del Ahorcado</h1>
+        <p>Bienvenido, <span id="nombreUsuarioDisplay"></span></p>
+    </header>
+    <div id="juego">
+        <img src="images/placeholder-300x300-1.png" alt="No tiene conexion">
+        <canvas id="ahorcadoCanvas" width="200" height="200"></canvas>
+        <div id="palabraOculta"></div>
+        <div id="letrasIncorrectas"></div>
+        <div id="inputLetra">
+            <input type="text" id="letraInput" maxlength="1">
+            <button id="adivinarBtn">Adivinar</button>
+        </div>
+    </div>
+    <script src="juego.js"></script>
+</body>
+<script src="scriptGame.js"></script>
+</html>
