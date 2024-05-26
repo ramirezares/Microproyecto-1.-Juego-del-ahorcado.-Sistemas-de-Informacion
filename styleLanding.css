@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: aliceblue;
     margin: 0;
     padding: 0;
 }
@@ -30,7 +30,7 @@ h2{
 .box {
     margin: 40px;
     padding: 20px;
-    background-color: white;
+    background: linear-gradient(to bottom right, white,white,white,white,#00DD00,#00DD00);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
     display: flex;
@@ -40,8 +40,13 @@ h2{
 }
 
 table {
+    background-color: white;
     width: 85%;
     border-collapse: collapse;
+}
+
+table th{
+    width: 33.3%;
 }
 
 th, td {
@@ -62,7 +67,7 @@ button#buttonInitGame {
     background-color: #009B4D;
     color: white;
     cursor: pointer;
-    border: gray solid;
+    border: black solid;
     border-radius: 5px;
 }
 

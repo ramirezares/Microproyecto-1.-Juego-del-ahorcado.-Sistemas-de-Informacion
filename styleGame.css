@@ -1,6 +1,6 @@
 body {
     font-family: Arial, sans-serif;
-    background-color: white;
+    background-color: aliceblue;
     margin: 0;
     padding: 0;
     justify-content: center;
@@ -8,7 +8,7 @@ body {
 }
 
 header {
-    background-color: gray;
+    background-color: #009B4D;
     color: white;
     text-align: left;
     padding: 10px;
@@ -19,7 +19,9 @@ header h1 {
 }
 
 header button {
-    background-color: white;
+    font-family: Arial, sans-serif;
+    background-color: #009B4D;
+    color: white;
     position: absolute;
     top: 10px;
     right: 10px;
@@ -30,7 +32,11 @@ header button {
 }
 
 header button:hover {
-    background-color: gray;
+    background-color: #00DD00;
+}
+
+h4{
+    color: #009B4D;
 }
 
 #game{
@@ -43,23 +49,18 @@ header button:hover {
 }
 
 .box {
-    margin: 5px;
-    padding: 5px;
-    background-color: white;
     border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: center;
     max-height: 50px;
-    min-width: 300px;
+    justify-items: center;
 }
 
 .boxToLeft{
     margin: 5px;
     padding: 5px;
-    background-color: white;
+    background: linear-gradient(to bottom right, white,white,white,white,#00DD00,#00DD00);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -82,6 +83,11 @@ header button:hover {
     margin: 20px;
     padding: 10px;
     justify-content: left;
+    min-width: 400px;
+}
+
+h2{
+    color: #009B4D;
 }
 
 h4{
@@ -94,14 +100,13 @@ h4{
     margin: 0px;
     padding: 0px;
     display: flex;
-    flex-direction: row;   
-    max-width: 300px;
+    flex-direction: row;
 }
 
 #img{
     margin: 10px;
     padding: 10px;
-    background-color: white;
+    background: linear-gradient(to bottom right, white,white,white,white,#00DD00,#00DD00);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
@@ -110,7 +115,7 @@ h4{
     margin: 20px;
     padding: 20px;
     max-width: 600px;
-    background-color: white;
+    background: linear-gradient(to bottom right, white,white,white,white,#00DD00,#00DD00);
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     display: flex;
@@ -120,8 +125,9 @@ h4{
 }
 
 .guess{
-    margin: 5px;
-    padding: 5px;
+    margin: 10px;
+    padding: 10px;
+    font-size: 1.4em;
     background-color: white;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
@@ -150,7 +156,6 @@ h4{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
 }
@@ -162,7 +167,6 @@ h4{
     top: 0;
     width: 100%;
     height: 100%;
-    background-color: rgb(0,0,0);
     background-color: rgba(0,0,0,0.4);
     padding-top: 60px;
 }
@@ -177,24 +181,15 @@ h4{
     text-align: center;
 }
 
-/*#playerName {
-    width: 80%;
-    padding: 10px;
-    margin: 20px 0;
-    border: 1px solid black;
-    border-radius: 5px;
-}*/
-
-/* Boton de volver al inicio*/
-#buttonSaveName {
+.backToLanding {
     padding: 10px 20px;
-    background-color: gray;
+    background-color: #009B4D;
     color: white;
     border: none;
     border-radius: 5px;
     cursor: pointer;
 }
 
-#buttonSaveName:hover {
-    background-color: blue;
+.backToLanding:hover {
+    background-color: #00DD00;
 }
