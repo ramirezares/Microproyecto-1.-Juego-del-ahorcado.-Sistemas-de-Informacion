@@ -153,15 +153,27 @@ window.onload = () => {
         let players = JSON.parse(localStorage.getItem("Players")) || {};
 
         if (players[playerName]) {
-            players[playerName][0] += playerPoints; // Sumar puntos actuales
+            players[playerName][0] += playerPoints; 
             if (Won) {
-                players[playerName][1] += 1; // Sumar una victoria si ganó
+                players[playerName][1] += 1;
             }
         } else {
             players[playerName] = [playerPoints, Won ? 1 : 0];
         }
 
-        localStorage.setItem("Players", JSON.stringify(players));
+        //Ordeno los datos
+        let playersArray = Object.entries(players).map(([name, [points, wins]]) => ({ name, points, wins }));
+
+        // Ordenar primero por victorias, luego por puntos
+        playersArray.sort((a, b) => b.wins - a.wins || b.points - a.points);
+
+        let sortedPlayers = {};
+        playersArray.forEach(player => {
+            sortedPlayers[player.name] = [player.points, player.wins];
+        });
+
+        // Guardado en localStorage
+        localStorage.setItem("Players", JSON.stringify(sortedPlayers));
     }
 
     load()
