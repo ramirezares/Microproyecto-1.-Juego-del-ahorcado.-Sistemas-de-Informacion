@@ -30,53 +30,8 @@ window.onload = () => {
         Z: ["zapato", "zapatilla", "zorro", "zarza", "zarpar"],
         }
         
-    var playerNameString = ""
-    var selectedWord = ""
 
-    //Le coloco al boton el evento al hacer click
-    document.getElementById("buttonInitGame").addEventListener("click", function () {
-        document.getElementById("popup").style.display = "block";
-
-    })
-
-    function getRandomWord() {
-        // Obtener todas las letras del objeto
-        const letters = Object.keys(words);
     
-        // Seleccionar una letra aleatoriamente
-        const letter = letters[Math.floor(Math.random() * letters.length)];
-    
-        // Obtener la lista de palabras que empiezan con esa letra
-        const possibleWords = words[letter];
-    
-        // Seleccionar una palabra aleatoria de la lista
-        const chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
-    
-        return chosenWord;
-    }
-
-    //Le coloco al boton el evento al hacer click
-    document.getElementById("buttonSaveName").addEventListener("click", function () {
-
-        //Obtengo el nombre que ingreso el jugador
-        const playerNameHTML = document.getElementById("playerName");
-        const name = playerNameHTML.value;
-
-        playerNameString = name; // Actualizo el nombre del jugador para guardarlo
-        
-        selectedWord = getRandomWord();
-
-        var arr = []
-        arr.push(playerNameString)
-        arr.push("0")
-
-        //Guardo el nombre y coloco que lleva 0 puntos
-        sessionStorage.setItem("playerN",arr)
-        sessionStorage.setItem("selectedWord",selectedWord)
-
-        window.location.href = "gamePage.html"
-    })
-
     // Función para cargar la tabla de jugadores del localStorage
     function loadPlayersTable() {
         let players = JSON.parse(localStorage.getItem("Players")) || {};
@@ -111,5 +66,55 @@ window.onload = () => {
             tbody.appendChild(row);
         }
     }
-    loadPlayersTable()
+    
+    // Cargo la tabla de jugadores 
+    loadPlayersTable()    
+
+    var playerNameString = ""
+    var selectedWord = ""
+
+    //Le coloco al boton el evento al hacer click
+    document.getElementById("buttonInitGame").addEventListener("click", function () {
+        document.getElementById("popup").style.display = "block";
+
+    })
+
+    function getRandomWord() {
+        // Obtengo todas las letras del objeto
+        const letters = Object.keys(words);
+    
+        // Selecciono una letra aleatoriamente
+        const letter = letters[Math.floor(Math.random() * letters.length)];
+    
+        // Obtengo la lista de palabras que empiezan con esa letra
+        const possibleWords = words[letter];
+    
+        // Selecciono una palabra aleatoria de la lista
+        const chosenWord = possibleWords[Math.floor(Math.random() * possibleWords.length)];
+    
+        return chosenWord;
+    }
+
+    //Le coloco al boton el evento al hacer click
+    document.getElementById("buttonSaveName").addEventListener("click", function () {
+
+        //Obtengo el nombre que ingreso el jugador
+        const playerNameHTML = document.getElementById("playerName");
+        const name = playerNameHTML.value;
+
+        // Actualizo el nombre del jugador para guardarlo
+        playerNameString = name; 
+        
+        selectedWord = getRandomWord();
+
+        var arr = []
+        arr.push(playerNameString)
+        arr.push("0")
+
+        //Guardo el nombre y coloco que lleva 0 puntos
+        sessionStorage.setItem("playerN",arr)
+        sessionStorage.setItem("selectedWord",selectedWord)
+
+        window.location.href = "gamePage.html"
+    })
 }
