@@ -1,25 +1,84 @@
 <!DOCTYPE html>
-<html lang="es">
-<head>
+<html>
+  <head>
     <title>Juego del Ahorcado</title>
-    <link rel="stylesheet" href="gamePage.html" type="text/css">
-</head>
-<body>
+    <link rel="stylesheet" href="styleGame.css" type="text/css" />
+  </head>
+  <body>
     <header>
-        <h1>Juego del Ahorcado</h1>
-        <p>Bienvenido, <span id="nombreUsuarioDisplay"></span></p>
+      <h1>Juego del Ahorcado</h1>
+      <button id="buttonToLanding">Inicio</button>
     </header>
-    <div id="juego">
-        <img src="images/placeholder-300x300-1.png" alt="No tiene conexion">
-        <canvas id="ahorcadoCanvas" width="200" height="200"></canvas>
-        <div id="palabraOculta"></div>
-        <div id="letrasIncorrectas"></div>
-        <div id="inputLetra">
-            <input type="text" id="letraInput" maxlength="1">
-            <button id="adivinarBtn">Adivinar</button>
+    <div id="game">
+      <div class="status">
+        <div class="information">
+          <div class="boxToLeft">
+            <h4>Nombre:</h4>
+            <p id="playerNameLabel"></p>
+          </div>
+          <div class="boxToLeft">
+            <h4>Puntos:</h4>
+            <p id="playerPointsLabel"></p>
+          </div>
+          <div class="boxToLeft">
+            <h4>Intentos restantes:</h4>
+            <p id="attempts"></p>
+          </div>
+          <br />
+          <div class="box">
+            <ul id="wordToGuess"></ul>
+          </div>
         </div>
+
+        <div id="img">
+          <img id="picture" src="images\6.png" alt="" />
+        </div>
+      </div>
+      <div>
+        <div id="alphabetContainer">
+          <button id="a" class="letter">a</button>
+          <button id="b" class="letter">b</button>
+          <button id="c" class="letter">c</button>
+          <button id="d" class="letter">d</button>
+          <button id="e" class="letter">e</button>
+          <button id="f" class="letter">f</button>
+          <button id="g" class="letter">g</button>
+          <button id="h" class="letter">h</button>
+          <button id="i" class="letter">i</button>
+          <button id="j" class="letter">j</button>
+          <button id="k" class="letter">k</button>
+          <button id="l" class="letter">l</button>
+          <button id="m" class="letter">m</button>
+          <button id="n" class="letter">n</button>
+          <button id="ñ" class="letter">ñ</button>
+          <button id="o" class="letter">o</button>
+          <button id="p" class="letter">p</button>
+          <button id="q" class="letter">q</button>
+          <button id="r" class="letter">r</button>
+          <button id="s" class="letter">s</button>
+          <button id="t" class="letter">t</button>
+          <button id="u" class="letter">u</button>
+          <button id="v" class="letter">v</button>
+          <button id="w" class="letter">w</button>
+          <button id="x" class="letter">x</button>
+          <button id="y" class="letter">y</button>
+          <button id="z" class="letter">z</button>
+        </div>
+      </div>
     </div>
-    <script src="juego.js"></script>
-</body>
-<script src="scriptGame.js"></script>
+    <div id="popup">
+      <div id="popup-content">
+        <h2>Te has quedado sin intentos</h2>
+        <button class="backToLanding">Volver al inicio</button>
+      </div>
+    </div>
+
+    <div id="popup1">
+      <div id="popup-content">
+        <h2>Felicidades! Has ganado la partida</h2>
+        <button class="backToLanding">Volver al inicio</button>
+      </div>
+    </div>
+    <script src="scriptGame.js"></script>
+  </body>
 </html>
