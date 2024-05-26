@@ -8,29 +8,33 @@
     <header>
       <h1>Juego del Ahorcado</h1>
     </header>
-    <div class="box">
-      <h2>Tabla de Jugadores</h2>
-      <table>
-        <thead>
-          <tr>
-            <th>Nombre</th>
-            <th>Puntuación</th>
-            <th>N° de Victorias</th>
-          </tr>
-        </thead>
-        <tbody id="bodyPlayersTable">
-          <!-- Las filas se agregarán dinámicamente con JavaScript -->
-        </tbody>
-      </table>
+    <div id="content">
+      <div class="box">
+        <h2>Tabla de Jugadores</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Nombre</th>
+              <th>Puntuación</th>
+              <th>N° de Victorias</th>
+            </tr>
+          </thead>
+          <tbody id="bodyPlayersTable">
+            <!-- Las filas se agregarán dinámicamente con JavaScript -->
+          </tbody>
+        </table>
+      </div>
+      <div class="box">
+        <h2>Instrucciones</h2>
+        <p>
+          ¿Puedes descubrir rápidamente cada una de las palabras ocultas? El
+          objetivo del juego es adivinar la palabra oculta antes de que el
+          muñeco del ahorcado esté completo. Cada letra incorrecta añadirá una
+          parte del cuerpo al muñeco. Pruebalo tu mismo.
+        </p>
+      </div>
+      <button id="buttonInitGame">Iniciar Juego</button>
     </div>
-    <div class="box">
-      <h2>Instrucciones</h2>
-      <p>
-        ¿Puedes descubrir rápidamente cada una de las palabras ocultas? El objetivo del juego es adivinar la palabra oculta antes de que el muñeco del ahorcado esté completo. Cada letra incorrecta añadirá una
-        parte del cuerpo al muñeco. Pruebalo tu mismo.
-      </p>
-    </div>
-    <button id="buttonInitGame">Iniciar Juego</button>
 
     <!-- Ventana emergente -->
     <div id="popup">
