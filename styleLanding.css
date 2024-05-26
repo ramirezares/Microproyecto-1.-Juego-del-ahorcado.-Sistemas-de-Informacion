@@ -6,7 +6,7 @@ body {
 }
 
 header {
-    background-color: gray;
+    background-color: #009B4D;
     color: white;
     text-align: left;
     padding: 10px;
@@ -16,34 +16,31 @@ header h1 {
     margin: 0;
 }
 
-header button {
-    background-color: white;
-    position: absolute;
-    top: 10px;
-    right: 10px;
-    padding: 10px 20px;
-    border: black solid;
-    border-radius: 5px;
-    cursor: pointer;
+h2{
+    color: #009B4D;
 }
 
-header button:hover {
-    background-color: gray;
-}
-
-div {
-    margin: 20px;
-    padding: 20px;
-    background-color: white;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    display: flex;
+#content{ 
+    display: flexbox;
     flex-direction: column;
+    justify-content: center;
     align-items: center;
 }
 
+.box {
+    margin: 40px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 100%;
+}
+
 table {
-    width: 80%;
+    width: 85%;
     border-collapse: collapse;
 }
 
@@ -54,24 +51,23 @@ th, td {
 }
 
 th {
-    background-color: white;
+    background-color: #009B4D;
+    color: white;
 }
 
 button#buttonInitGame {
     display: block;
     margin: 20px auto;
     padding: 10px 20px;
-    background-color: white;
+    background-color: #009B4D;
     color: white;
-    border: none;
-    border-radius: 5px;
     cursor: pointer;
-    color: black;
-    border: black solid;
+    border: gray solid;
+    border-radius: 5px;
 }
 
 button#buttonInitGame:hover {
-    background-color: gray;
+    background-color: #00DD00;
 }
 
 #popup{
@@ -106,7 +102,7 @@ button#buttonInitGame:hover {
 
 #buttonSaveName {
     padding: 10px 20px;
-    background-color: gray;
+    background-color: #009B4D;
     color: white;
     border: none;
     border-radius: 5px;
@@ -114,6 +110,6 @@ button#buttonInitGame:hover {
 }
 
 #buttonSaveName:hover {
-    background-color: blue;
+    background-color: #00DD00;
 }
 
